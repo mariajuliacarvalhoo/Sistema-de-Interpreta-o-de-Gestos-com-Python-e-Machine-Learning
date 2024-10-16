@@ -27,8 +27,8 @@ while(1):
         upper_skin = np.array([20, 255, 255], dtype=np.uint8)
 
         # máscara de extração de contorno + filtro de dilatação
-        mask = cv2.inRange(hsv, lower_skin, upper_skin)  # Corrigido lower_skins
-        mask = cv2.dilate(mask, kernel, iterations=4)  # Corrigido kernel
+        mask = cv2.inRange(hsv, lower_skin, upper_skin)  
+        mask = cv2.dilate(mask, kernel, iterations=4)  
         mask = cv2.GaussianBlur(mask, (5, 5), 100)
 
         # máscaras para construção de contorno
